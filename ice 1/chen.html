@@ -6,51 +6,90 @@
 		<link rel="stylesheet" type="text/css" href="css/ice1.css">
 	</head>
 	<body>
-		<h1>Chen and Yao 's site</h1>
-		<nav>
-			<ul>
-				<li><a href= "chen.html" class="nav">Chen</a></li>
-				<li><a href= "yao.html" class="nav">Yao</a></li>
-			</ul>
-		</nav>
-		<!--1st pagragraph-->
-		<p>Hello welcome to our first website! Feel free to explore!</p>
-		<!--3 pics-->
-		<img src="1.jpeg" alt="donuts"> <!--native-->
-    <img src="https://www.just-eat.ie/takeaways/assets/themes/base/images/en_ie/cuisines/home/large_pizza.gif" alt="pizza"> <!--nonlocal-->
-		<img src="sketch.jpg" alt="website sketch"> <!--native-->
-		<!--foem-->
-		<form>
-				Name:
-				<input type="text" name="name" id = "name"></label><br>
-				<label for="dob">DOB:</label>
-				<input type="date" name="DOB" id = "dob"><br>
+		<header>
+			<h1>Chen and Yao 's site</h1>
+			<nav>
+				<ul>
+					<li><a href= "chen.html" class="nav">Chen</a></li>
+					<li><a href= "https://yaojiah.github.io/ICE1/" class="nav">Yao</a></li>
+				</ul>
+			</nav>
+		</header>
 
-				Please enter your choice of snack:<br>
-				<input type="radio" name="snack" value="pizza"> Pizza<br>
-		  		<input type="radio" name="snack" value="donut"> Donut<br>
-		  		<input type="radio" name="snack" value="vegan"> Vegan Stuff<br>
+		<section class="intro">
+			<div class="greetings">
+				<!--1st pagragraph-->
+				<p>Hello welcome to our first website! Feel free to explore!</p>
+			</div>
+		</section>
 
-		  		Please enter your choice of drink:<br>
-				<input type="radio" name="snack" value="coffee"> Coffee<br>
-		  		<input type="radio" name="snack" value="tea"> Tea<br>
-		  		<input type="radio" name="snack" value="water"> Water<br>
-		</form>
+		<section class='pictures'>
+			<div id="img1">
+				<!--3 pics-->
+				<img src="images/1.jpeg" alt="donuts"> <!--native-->
+			</div>
+			<div id="img2">
+		    <img src="https://www.just-eat.ie/takeaways/assets/themes/base/images/en_ie/cuisines/home/large_pizza.gif" alt="pizza"> <!--nonlocal-->
+			</div>
+			<div id = "img3">
+				<img src="images/sketch.jpg" alt="website sketch"> <!--native-->
+			</div>
+		</section>
 
-		<!--2nd pagragraph-->
-		<p> Thanks for your patience. We will now treat you with an interesting video!</p>
-		<!--1st interesting html element-->
-		<iframe width="854" height="480" src="https://www.youtube.com/embed/OUQr8lG45AU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		<section class ="survey">
+			<div class="survey intro">
+				<p>Share with us your eating preference.</p>
+			</div>
+			<!--form-->
+			<div>
+				<form>
+						<label for='name'>Name: </label>
+						<input type="text" name="name" id = "name"><br>
+						<label for="dob">DOB:</label>
+						<input type="date" name="DOB" id = "dob"><br>
 
-		<p> Feel free to hit the Connect button below</p>
-		<button type="button"><a href="mailto:chenlicl@umich.edu">Let's Connect</a></button> <!--change the email address-->
+						Please enter your choice of snack:<br>
+						<input type="radio" name="snack" id='pizza' value="pizza">
+						<label for='pizza'>Pizza</label><br>
+						<!--needtostartfromhere-->
+				  		<input type="radio" name="snack" id="donut" value="donut">
+							<label for='donut'>Donut</label><br>
+				  		<input type="radio" name="snack" id="vegan" value="vegan">
+							<label for='vegan'>Vegan Stuff</label><br>
+
+				  		Please enter your choice of drink:<br>
+						<input type="radio" name="drink" id='coffee' value="coffee">
+						<label for='coffee'> Coffee</label><br>
+				  		<input type="radio" name="drink" id='tea' value="tea">
+							<label for='tea'>Tea</label><br>
+				  		<input type="radio" name="drink" id='water' value="water">
+							 <label for='water'>Water</label><br>
+				</form>
+			</div>
+		</section>
+			<!--2nd pagragraph-->
+			<!-- <p> Thanks for your patience. We will now treat you with an interesting video!</p> -->
+			<!--1st interesting html element-->
+			<!-- <iframe width="854" height="480" src="https://www.youtube.com/embed/OUQr8lG45AU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
+	<!--interesting element:button-->
+		<section class="social">
+			<div class="social">
+				<p> Feel free to hit the button below to reach out to us.</p>
+			</div>
+			<div>
+				<a href="mailto:chenlicl@umich.edu" class="button">Let's Connect</a>
+				<!-- <button type="button"><a href="mailto:chenlicl@umich.edu">Let's Connect</a></button> -->
+			</div>
+		</section>
 
 		<footer>
-		<nav>
-				<a href= "chen.html" class="nav">Chen</a>
-				<a href= "yao.html" class="nav">Yao</a>
-		</nav>
-		<small>&copy; Chen and Yao</small>
+			<nav>
+				<ul>
+					<li><a href= "chen.html" class="nav">Chen</a></li>
+					<li><a href= "https://yaojiah.github.io/ICE1/" class="nav">Yao</a></li>
+				</ul>
+			</nav>
+			<small>&copy; Chen and Yao</small>
 		</footer>
 	</body>
 </html>
