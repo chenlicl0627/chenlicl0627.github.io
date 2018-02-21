@@ -1,7 +1,75 @@
 
 @media only screen and (min-width: 650px){
+
+  .top-nav ul{
+  display: flex;
+  justify-content: center;
+}
+
   .top-nav ul li, .menu-icon{
     display: inline-block;
-
   }
+
+  /* .photo-cell:nth-child(3),.photo-cell:nth-child(4){ */
+  .compiled-cell{
+    padding:0;
+  }
+
+      /* METHOD1 INLINE-BLOCK*/
+  .compiled-cell .photo-cell{
+      display:inline-block;
+      width:47.2%;/*find this value by try and trial*/
+      padding:0;
+  }
+
+  .main-content-home{
+  	margin-top: 110px;}
+
+}
+
+    /* METHOD3 FLEX
+display:felx;
+justify-conten:space-between
+    */
+
+
+
+
+@media only screen and (min-width: 1000px){
+  .logo{
+    float:left;}
+
+    /* METHOD2 GRID*/
+
+    .main-content-home{
+    	margin-top: 110px;}
+
+    .photo-grid{
+      display:flex;
+      /* flex-flow: row wrap; */
+      flex-wrap: wrap;
+      /* flex-direction: row; */
+    }
+  /* .photo-cell:nth-child(3),.photo-cell:nth-child(4){
+      display:inline-block;
+      width:40%;
+  } */
+
+
+
+  .photo-grid {
+    display: grid;
+    /* grid-column-template: 1fr 1fr 2fr; */
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .photo-cell, .compiled-cell {
+    grid-column: span 2;
+  }
+
+  .compiled-cell .photo-cell {
+    width: 47%;
+  }
+
+
 }

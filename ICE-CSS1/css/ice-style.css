@@ -1,0 +1,156 @@
+/*
+=================
+Box-sizing
+=================
+*/
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: green;
+}
+
+
+/*
+=================
+Positioning
+=================
+*/
+
+#wrap{
+  position:relative;
+  overflow:visible;
+}
+
+
+aside{
+  display:inline-block;
+  position:absolute;
+  right:0;
+  top:calc(62.38px + 50px);
+  width:20%;
+  height:85vh;
+  background-color: white;
+  background-image: url("http://www.literarygenius.info/images/william-shakespeare.jpg");
+  background-repeat:no-repeat;
+  background-position: center 50%;
+  background-size:contain;
+}
+#content{
+  display:inline-block;
+  background-color:grey;
+  width:80%;
+}
+
+nav{
+  display:flex;
+  justify-content: center;
+}
+
+footer{
+  position:absolute;
+  left:0;
+}
+
+
+/* aside{
+  background-imgage: url("william-shakespeare.jpg");
+  background-repeat:no-repeat;
+  background-position: center 50%;
+} */
+
+
+
+/*
+=================
+Header
+=================
+*/
+
+
+
+header h1{
+  position: absolute;
+  top:0;
+  right:0;
+  margin:0;
+}
+header{
+  display:block;
+  background: yellow;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding:1.3em;
+  height:8vh;
+}
+nav ul{
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+nav ul li{
+  display:inline-block;
+  background:black;
+  padding:1em;
+  margin:0 0.3em;
+
+
+}
+nav ul li a{
+  color:#fff;
+  font-size:1em;
+}
+
+nav ul {
+  width:80%;
+  margin:0;
+}
+
+
+/*
+=================
+Content
+=================
+*/
+#content h1{
+  font-size:2em;
+  font-weight:bold;
+}
+#content ul{
+  text-align:center;
+}
+
+#content p, #content ul li{
+  line-height:1.5em;
+}
+
+#content ul li{
+  list-style:none;
+}
+/*
+=================
+Aside
+=================
+*/
+aside h2{
+  font-size:1.5em;
+  font-weight:bold;
+  }
+
+aside ul {
+  position: relative;
+}
+/*
+=================
+Footer
+=================
+*/
+
+body{
+  margin:0;
+}
