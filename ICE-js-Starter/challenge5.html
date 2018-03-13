@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 5</title>
+	<!-- still don't quite understand the whole structure -->
+	<style>
+	body{
+		margin: 2%;
+		border: 1px solid black;
+		background-color: #b3b3b3;
+	}
+	#image{
+    	line-height:325px;
+		width: 388px;
+    	height: 325px;
+		border:5px solid black;
+		margin:0 auto;
+    	background-repeat: no-repeat;
+    	color:#FFFFFF;
+    	text-align: center;
+    	background-color: #8e68ff;
+    	background-size: 100%;
+    	margin-bottom:25px;
+    	font-size:150%;
+	}
+	.preview{
+		width:10%;
+		margin-left:17%;
+    	border: 10px solid black;
+	}
+	img{
+		width:95%;
+	}
+	h1{
+		text-align: center;
+	}
+	</style>
+
+	<script type="text/javascript"> // question: what does this type mean?
+	// I used Two functions here.  Starter idea at:
+	// https://codepen.io/ColleenEMc/pen/XmZzWw
+	function showImage(img){ //1question: how to decide the parameter name inside the parenthesis after the function name? Why we use the name "img" here?? Answer: This is just a variable name. You can name it whatever you want, eg. i instead of img
+	// //img.src //question: why we need to write this out and then comment it?
+	// img.alt
+	var box = document.getElementById("image");
+	//backgroung-image: url('https://abc.com') ----this is how we set background image in css.
+		box.style.backgroundImage = "url('" + img.src + "')"; // question: don't understand what the plus sign means
+		// "url(img.src)" will not work because this means asking interpreter to find a file whose name is img.src.
+		// instead, we need to concatenate things, as in python, we use plus sign to concatenate things, we add these three chunk of string together:
+		//"url('"
+		box.innerText = img.alt; // innerText is the attribute which controls the what text to show up on the image. In this case, it will replace the text "Hover over an image below." to img.alt
+	}
+
+	function hideImage(){ // question: why we don't need a parameter name here??
+		var box=document.getElementById('image');
+		box.style.backgroundImage = null;//or ""
+		box.innerText = "Hover over an image below.";
+	}
+
+	</script>
+</head>
+
+<body>
+	<h1>Challenge 5</h1>
+		<div id = "image">
+			Hover over an image below.
+		</div>
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "1"
+
+			alt = "Styling with a Bandana"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg";
+
+			onmouseover = "showImage(this)"
+			onmouseout = "hideImage()"
+			onfocus="showImage(this)"
+			onblur="hideImage()">
+
+			<!-- S1 SET HOVER EFFECT: onmouseover  -> S2 SET UNHOVER EFFECT: onmouseout -> S3 SET EFFECT FOR SITUATION WHEN THE KEY TABS ONTO THE IMAGE: onfocus -> S4 SET EFFECT FOR SITUATION WHEN THE KEYBORAD DOESN'T TAB ONTO THE IMAGE -->
+
+				<!-- S1.1 onmouseover = "showImage(this)" -->
+						<!-- in Javascript, function is another kind of object -->
+						<!-- onmouseover = function() but the function has to wrriten in the format of string in javascript -->
+						<!-- "this" is a selfcalling syntax in javascript just as "self" in python -->
+				<!-- S1.2 define the function showImage() -->
+				<!-- S1.3 give each image the event onmouseover = "showImage(this)"s -->
+
+			<!-- S2.1 onmouseout = "hideImage()" -->
+			<!-- S2.2 define the function hideImage() -->
+			<!-- S1.3 give each image the event onmouseover = "showImage(this)"s -->
+
+			<!-- S3.1 onfocus="showImage(this)" -->
+			<!-- S2.2 the function showImage has already been defined so do not need to define it again -->
+			<!-- S1.3 give each image the event onfocus="showImage(this)" -->
+			<!-- question: don't understand how tabindex="1"works -->
+			<!-- S3.1 onblur="hideImage()" -->
+			<!-- S2.2 the function hideImage has already been defined so do not need to define it again -->
+			<!-- S1.3 give each image the event onblur="hideImage()" -->
+
+
+
+
+
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "1"
+			alt = "With My Boy"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG";
+			onmouseover = "showImage(this)"
+			onmouseout = "hideImage()"
+			onfocus="showImage(this)"
+			onblur="hideImage()">
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" tabindex = "1"
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg"
+			alt = "Young Puppy";
+			onmouseover = "showImage(this)"
+			onmouseout = "hideImage()"
+			onfocus="showImage(this)"
+			onblur="hideImage()">
+</body>
+</html>
