@@ -18,8 +18,10 @@
 			//STEP1 CHECK WHETHER THE NAME FIELD HAS INPUT, IF NO, SHOWS THE ERROR MESSAGE. IF YES, HIDE THE ERRORMESSAGE.
 			var fullname = document.getElementById("fullname");
 			var fullnameValue = fullname.value;
-			if (fullnameValue == ""){ //or it can be var if(!fullname.value)
-				var nameError = document.getElementById("nameerrormsg");
+			var nameError = document.getElementById("nameerrormsg");
+			if (fullnameValue == ""){ //or it can be var if(!fullname.value) ---- No actually. We only use the ! sign for bollean value. but not for checking the text field.
+				//if if the text field is empty, it's an empty string instead of a false which is an error.
+				// var nameError = document.getElementById("nameerrormsg");
 				nameError.style.display="block";
 			}
 			else{
@@ -28,18 +30,21 @@
 			//STEP2 CHECK WHETHER THE ADDRESS FIELD HAS INPUT, IF NO, SHOWS THE ERROR MESSAGE. IF YES, HIDE THE ERRORMESSAGE.
 			var streetaddr = document.getElementById("streetaddr");
 			var streetaddrValue = streetaddr.value;
-			if (! streetaddrValue){
-				var addressError = document.getElementById("addrerrormsg");
+			var addressError = document.getElementById("addrerrormsg");
+
+			if (streetaddrValue==""){
 				addressError.style.display="block";
 			}
 			else{
 				addressError.style.display ="none";
 			}
-
+			// alert(fullnameValue);
+			// alert(streetaddrValue);
 			//STEP3 PREVENT SUBMISSION IF EITHER OF THE TEXTFIELDS MISSES AN INPUT
-			if (!fullnameValue || !streetaddrValue){
+			if (fullnameValue =="" || streetaddrValue==""){
 			 return false; //
-			}
+		 }
+
 		}
 		//question: WHY IT DOESN'T WORK?? WHY I CAN STILL SUBMIT THE FORM EVEN WHEN TWO FIELDS ARE EMPTY?????
     </script>
@@ -47,6 +52,9 @@
 <body>
     <h1>Challenge 4</h1>
 	<form action="challenge5.html" onsubmit="return checkForm();">
+		<!-- The reason why we have to use the word return instead of just calling the name of this function is because we use this word to tell the interpreter to
+		use the return value of checkForm() function. If we don't have this word here. The checkForm() function we defined above will stil give us a return value "false"
+	but this return value will not be used to prevent submission -->
         <fieldset>
         <legend>Personal details</legend>
           <label for="fullname">Full name: </label>
