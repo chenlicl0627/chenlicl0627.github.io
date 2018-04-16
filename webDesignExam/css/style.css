@@ -1,6 +1,6 @@
 /* Images are styled at 50% */
 body{
-  background-image: url("images/background.png");
+  background-image: url("../images/background.png");
 }
 .one {
   width:50%;
