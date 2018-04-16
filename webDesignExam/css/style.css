@@ -1,28 +1,35 @@
 /* Images are styled at 50% */
-
+body{
+  background-image: url("images/background.png");
+}
 .one {
- height: 200px;
- width: 50%;
+  width:50%;
+  height:auto;
  box-sizing: border-box;
- background-color: blue;
- margin: 1em;
- padding: 0;
+ padding: 5%;
+ border-style:solid;
+ border-width:5px;
+ border-color:blue;
 }
 
 .two {
- height: 200px;
- width: 50%;
+ width:50%;
+ height:auto;
  box-sizing: border-box;
- background-color: red;
- margin: 1em;
- padding:0;
+ padding: 5%;
+ border-style:solid;
+ border-width:5px;
+ border-color:blue;
 }
+
 p {
  margin: 0;
 }
 /* first way of centering thigns: flex */
 .container {
  display: flex;
+ justify-content: center;
+ align-items:center;
 }
 .center{
   justify-content: center;
