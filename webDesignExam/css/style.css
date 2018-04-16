@@ -1,4 +1,3 @@
-/* Images are styled at 50% */
 body{
   background-image: url("../images/background.png");
 }
@@ -30,22 +29,4 @@ p {
  display: flex;
  justify-content: center;
  align-items:center;
-}
-.center{
-  justify-content: center;
-  align-items:center;
-}
-.animal{
-  width: 50%;
-  height: auto;
-}
-/* second way of centering thigns: block */
-.another_animal{
-  margin-right:auto;
-  margin-left:auto;
-  width: 50%;
-  display:block;
-}
-.todisappear{
-  width:50%;
 }
